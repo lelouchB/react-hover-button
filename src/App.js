@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 function App() {
-  const [bg, setBg] = useState("white");
+  const [bg, setBg] = useState("#fafafa");
 
-  const back = {
+  const appStyles = {
     background: `${bg}`,
     height: "100vh",
     display:"flexbox",
@@ -15,7 +15,7 @@ function App() {
     fontSize: "20px",
     borderRadius: "40px",
     border: "1px solid black",
-    color: "white",
+    color: "#fafafa",
     margin: "0.5em 1em",
     padding: "0.25em 1em",
     background: "#1D499B",
@@ -45,32 +45,28 @@ function App() {
     setBg(color);
   };
   return (
-    <div style={back}>
-      {/* <Button> White</Button> */}
+    <div style={appStyles}>
       <button
-        className="primary"
         style={styleB}
         onMouseEnter={() => handleHover("#1D499B")}
-        onMouseLeave={() => handleHover("white")}
+        onMouseLeave={() => handleHover("#fafafa")}
       >
         {" "}
         Blue
       </button>
 
       <button
-        className="primary"
         style={styleR}
         onMouseEnter={() => handleHover("#c83f49")}
-        onMouseLeave={() => handleHover("white")}
+        onMouseLeave={() => handleHover("#fafafa")}
       >
         {" "}
         Red
       </button>
       <button
-        className="primary"
         style={styleY}
         onMouseEnter={() => handleHover("#F9D648")}
-        onMouseLeave={() => handleHover("white")}
+        onMouseLeave={() => handleHover("#fafafa")}
       >
         {" "}
         Yellow
